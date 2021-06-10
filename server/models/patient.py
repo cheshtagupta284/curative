@@ -1,4 +1,5 @@
 from db import db
+from datetime import date, datetime
 
 class PatientModel(db.Model):
     ''' 9 attributes in Patient table'''
@@ -12,8 +13,9 @@ class PatientModel(db.Model):
     contact = db.Column(db.String(10), unique=True)
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(80), unique=True)
+    date = db.Column(db.Date())
 
-    def __init__(self, email, name, password, city, state, contact, age, gender):
+    def __init__(self, email, name, password, city, state, contact, age, gender, date):
         self.email = email
         self.name = name
         self.contact = contact
@@ -22,6 +24,9 @@ class PatientModel(db.Model):
         self.gender = gender
         self.password = password
         self.state = state
+        format_str = '%Y-%m-%d' # The format
+        datetime_obj = datetime.strptime(date, format_str)
+        self.date = datetime_obj.date()
 
     def json(self):
         # A method to return the json of single patient data using object
@@ -34,6 +39,7 @@ class PatientModel(db.Model):
                 'gender': self.gender,
                 'city': self.city,
                 'contact': self.contact,
+                'date': str(self.date)
                 }
 
     def save_to_db(self):
@@ -61,3 +67,9 @@ class PatientModel(db.Model):
     def find_patient_by_id(cls, _id):
         # A mapping to retreive single patient data from the database using id
         return cls.query.filter_by(id=_id).first()
+    
+    @classmethod
+    def find_patient_by_date(cls, _date):
+        # A mapping to retreive single patient data from the database using id
+        return cls.query.filter_by(date=_date).first()
+

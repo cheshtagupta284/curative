@@ -21,6 +21,7 @@ class DoctorRegister(Resource):
     parser.add_argument('name', required=True, type=str)
     parser.add_argument('verified', required=True, type=str)
     parser.add_argument('IMRNumber', required=True, type=int)
+    parser.add_argument('date', required=True, type=str)
 
     def post(self):
         data = DoctorRegister.parser.parse_args()

@@ -1,5 +1,11 @@
 '''
-A resource to register patients because patients will be registered through an endpoint
+A resource to cater various requests from patients
+# register (patient)
+# get (patient)
+# get (patient list)
+# login
+# logout
+# diagnose
 '''
 
 from flask_restful import Resource, reqparse
@@ -21,7 +27,7 @@ class PatientRegister(Resource):
     parser.add_argument('name', required=True, type=str)
     parser.add_argument('age', required=True, type=str)
     parser.add_argument('gender', required=True, type=str)
-
+    parser.add_argument('date', required=True, type=str)
     def post(self):
         data = PatientRegister.parser.parse_args()
         if PatientModel.find_patient_by_email(data['email']):

@@ -1,4 +1,5 @@
 from db import db
+from datetime import date, datetime
 
 class DoctorModel(db.Model):
     ''' 9 attributes in Doctor table'''
@@ -12,8 +13,9 @@ class DoctorModel(db.Model):
     contact = db.Column(db.String(10), unique=True)
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(80), unique=True)
+    date = db.Column(db.Date())
 
-    def __init__(self, email, name, password, city, state, contact, IMRNumber, verified):
+    def __init__(self, email, name, password, city, state, contact, IMRNumber, verified, date):
         self.email = email
         self.name = name
         self.contact = contact
@@ -22,6 +24,9 @@ class DoctorModel(db.Model):
         self.verified = verified
         self.password = password
         self.state = state
+        format_str = '%Y-%m-%d' # The format
+        datetime_obj = datetime.strptime(date, format_str)
+        self.date = datetime_obj.date()
 
     def json(self):
         # A method to return the json of single doctor data using object
@@ -34,6 +39,7 @@ class DoctorModel(db.Model):
                 'verified': self.verified,
                 'city': self.city,
                 'contact': self.contact,
+                'date' : str(self.date)
                 }
 
     def save_to_db(self):
