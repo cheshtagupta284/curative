@@ -3,9 +3,11 @@ from flask_restful import Api
 from resources.patient import PatientRegister, PatientList ,Patient #, PatientLogout, PatientRequest, PatientLogin
 from resources.doctor import DoctorRegister, DoctorList, Doctor #, DoctorLogout, DoctorRequest, DoctorLogin
 from blacklist import BLACKLIST
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 api = Api(app)
+CORS(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
