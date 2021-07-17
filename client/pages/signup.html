@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Curative</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+    <link rel="stylesheet" href="../css/style3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+</head>
+
+<body>
+   
+    <div class="signUpPg">
+
+        <!-- HEADER -->
+        <div class="signUpHead">
+            <span style=" display:block; font-weight: bold;">Curative.</span>
+            Sign Up
+        </div>
+
+        <!-- MAIN -->
+        <div class="signUpMain">
+
+            <div class="signUpMainUp">
+
+                <form id="signUpFormType" class="signUpTypeForm">
+                    <div class="signUpMainFormType">
+                        <label for="signUpType" class="signUpMainFormType1">Please select a type from the
+                            following</label>
+                        <select name="type" id="signUpType" required="true" placeholder="Enter your Type"
+                            class="signUpMainFormType2">
+                            <option value="Patient">Patient</option>
+                            <option value="Doctor">Doctor</option>
+                        </select>
+                    </div>
+                    <div class="signUpButton">
+                        <button class="signUpSave">Save</button>
+                    </div>
+                </form>
+
+                <form id="signUpFormPatient" class="signUpMainFormPatient">
+                    <div class="description">Patient</div>
+                    <!-- Name -->
+                    <div class="signUpMainFormName">
+                        <label for="signUpNamePatient" class="signUpMainFormName1">First Name</label>
+                        <input name="name" id="signUpNamePatient" type="text" class="signUpMainFormName2"
+                            required="true" placeholder="Enter your Name">
+                        <div id="invalidPatientName" style="color: red; font-size: x-small;">
+                            Please enter valid Name
+                        </div>
+                    </div>
+                    <!-- CONTACT -->
+                    <div class="signUpMainFormContact">
+                        <label for="signUpContactPatient" class="signUpMainFormContact1">Contact</label><input name="contact"
+                            id="signUpContactPatient" type="tel" class="signUpMainFormContact2" required="true"
+                            placeholder="Enter your Contact">
+                        <div id="invalidPatientContact" style="color: red; font-size: x-small;">
+                            Please enter valid Contact
+                        </div>
+
+                    </div>
+                    <!-- CITY -->
+                    <div class="signUpMainFormCity">
+                        <label for="signUpCityPatient" class="signUpMainFormCity1">City</label><input name="city"
+                            id="signUpCityPatient" type="text" class="signUpMainFormCity2" required="true"
+                            placeholder="Enter your City">
+                        <div id="invalidPatientCity" style="color: red; font-size: x-small;">
+                            Please enter valid City
+                        </div>
+                    </div>
+                    <!-- STATE -->
+                    <div class="signUpMainFormState">
+                        <label for="signUpStatePatient" class="signUpMainFormState1">State</label>
+                        <select name="state" id="signUpStatePatient" required="true" placeholder="Enter your State"
+                            class="signUpMainFormState2">
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Orissa">Orissa</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttaranchal">Uttaranchal</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                        </select>
+                    </div>
+
+                    <!-- AGE -->
+                    <div class="signUpMainFormAge">
+                        <label for="signUpAgePatient" class="signUpMainFormAge1">Age</label><input name="age" id="signUpAgePatient"
+                            type="number" class="signUpMainFormAge2" required="true" placeholder="Enter your Age" min="1" max="100">
+                        <div id="invalidPatientAge" style="color: red; font-size: x-small;">
+                            Please enter valid Age
+                        </div>
+                    </div>
+
+                    <!-- GENDER -->
+                    <div class="signUpMainFormGender">
+                        <label for="signUpGenderPatient" class="signUpMainFormGender1">Gender</label>
+                        <select name="gender" id="signUpGenderPatient" required="true" placeholder="Enter your Gender"
+                            class="signUpMainFormGender2">
+                            <option value="F">Female</option>
+                            <option value="M">Male</option>
+                            <option value="O">Other</option>
+                        </select>
+                        <div id="invalidPatientGender" style="color: red; font-size: x-small;">
+                        Please enter valid Gender</div>
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div class="signUpMainFormEmail">
+                        <label for="signUpEmailPatient" class="signUpMainFormEmail1">Email</label><input name="email"
+                            id="signUpEmailPatient" type="email" class="signUpMainFormEmail2" required="true"
+                            placeholder="Enter your EmailId">
+                        <div id="invalidPatientEmail" style="color: red; font-size: x-small;">
+                            Please enter valid EmailId
+                        </div>
+                    </div>
+                    <!-- PASSWORDS -->
+                    <div class="signUpMainFormPassword">
+                        <div class="signUpMainFormPass1">
+                            <label for="signUpPass1Patient" class="signUpMainFormPassL1">Password</label><input
+                                name="password" id="signUpPass1Patient" type="password" class="signUpMainFormPass"
+                                required="true" placeholder="Enter your Password"><i class="bi bi-eye-slash" id="eye-1-patient"
+                                onclick="togglePassword1Patient()"></i>
+                            <div id="invalidPatientPassword" style="color: red; font-size: x-small;">
+                                Please enter valid Password
+                            </div>
+                        </div>
+                        <div class="signUpMainFormPass2">
+                            <label for="signUpPass2Patient" class="signUpMainFormPassL2">Re-enter Password</label><input
+                                name="password2" id="signUpPass2Patient" type="password" class="signUpMainFormPass"
+                                required="true" placeholder="Re Enter your Password"><i class="bi bi-eye-slash" id="eye-2-patient"
+                                onclick="togglePassword2Patient()"></i>
+                            <div id="passwordPatientNotMatch" style="color: red; font-size: x-small;">
+                                Passwords don't match
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="signUpButton">
+                        <button class="signUpSubmit">SUBMIT</button>
+                    </div>
+                </form>
+
+                <form id="signUpFormDoctor" class="signUpMainFormDoctor">
+                    <!-- Name -->
+                    <div class="description">Doctor</div>
+                    <div class="signUpMainFormName">
+                        <label for="signUpNameDoctor" class="signUpMainFormName1">First Name</label>
+                        <input name="name" id="signUpNameDoctor" type="text" class="signUpMainFormName2"
+                            required="true" placeholder="Enter your Name">
+                        <div id="invalidDoctorName" style="color: red; font-size: x-small;">
+                            Please enter valid Name
+                        </div>
+                    </div>
+
+                    <!-- CONTACT -->
+                    <div class="signUpMainFormContact">
+                        <label for="signUpContactDoctor" class="signUpMainFormContact1">Contact</label><input name="contact"
+                            id="signUpContactDoctor" type="tel" class="signUpMainFormContact2" required="true"
+                            placeholder="Enter your Contact">
+                        <div id="invalidDoctorContact" style="color: red; font-size: x-small;">
+                            Please enter valid Contact
+                        </div>
+
+                    </div>
+                    <!-- CITY -->
+                    <div class="signUpMainFormCity">
+                        <label for="signUpCityDoctor" class="signUpMainFormCity1">City</label><input name="city"
+                            id="signUpCityDoctor" type="text" class="signUpMainFormCity2" required="true"
+                            placeholder="Enter your City">
+                        <div id="invalidDoctorCity" style="color: red; font-size: x-small;">
+                            Please enter valid City
+                        </div>
+                    </div>
+                    <!-- STATE -->
+                    <div class="signUpMainFormState">
+                        <label for="signUpStateDoctor" class="signUpMainFormState1">State</label>
+                        <select name="state" id="signUpStateDoctor" required="true" placeholder="Enter your State"
+                            class="signUpMainFormState2">
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Orissa">Orissa</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttaranchal">Uttaranchal</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                        </select>
+                    </div>
+
+                    <!-- IMR -->
+                    <div class="signUpMainFormIMR">
+                        <label for="signUpIMRDoctor" class="signUpMainFormIMR1">IMR</label><input name="IMRNumber" id="signUpIMRDoctor"
+                            type="text" class="signUpMainFormIMR2" required="true" placeholder="Enter your IMR" min="1" max="100">
+                        <div id="invalidDoctorIMR" style="color: red; font-size: x-small;">
+                            Please enter valid IMR
+                        </div>
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+                    <div class="signUpMainFormEmail">
+                        <label for="signUpEmailDoctor" class="signUpMainFormEmail1">Email</label><input name="email"
+                            id="signUpEmailDoctor" type="email" class="signUpMainFormEmail2" required="true"
+                            placeholder="Enter your EmailId">
+                        <div id="invalidDoctorEmail" style="color: red; font-size: x-small;">
+                            Please enter valid EmailId
+                        </div>
+                    </div>
+
+                    <!-- PASSWORDS -->
+                    <div class="signUpMainFormPassword">
+                        <div class="signUpMainFormPass1">
+                            <label for="signUpPass1Doctor" class="signUpMainFormPassL1">Password</label><input
+                                name="password" id="signUpPass1Doctor" type="password" class="signUpMainFormPass"
+                                required="true" placeholder="Enter your Password"><i class="bi bi-eye-slash" id="eye-1-doctor"
+                                onclick='togglePassword1Doctor()'></i>
+                            <div id="invalidDoctorPassword" style="color: red; font-size: x-small;">
+                                Please enter valid Password
+                            </div>
+                        </div>
+                        <div class="signUpMainFormPass2">
+                            <label for="signUpPass2Doctor" class="signUpMainFormPassL2">Re-enter Password</label><input
+                                name="password2" id="signUpPass2Doctor" type="password" class="signUpMainFormPass"
+                                required="true" placeholder="Re Enter your Password"><i class="bi bi-eye-slash" id="eye-2-doctor"
+                                onclick='togglePassword2Doctor()'></i>
+                            <div id="passwordDoctorNotMatch" style="color: red; font-size: x-small;">
+                                Passwords don't match
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="signUpButton">
+                        <button class="signUpSubmit">SUBMIT</button>
+                    </div>
+                </form>
+
+                <div class="signUpButton">
+                    <button class="signUpReset" onclick='signUpReset()'>RESET</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="signUpFoot">
+            Already an account? SigIn <a href="login.html" class="signUpHere">Here</a>
+        </div>
+
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="../js/javascript3.js"></script>
+</body>
+
+</html>

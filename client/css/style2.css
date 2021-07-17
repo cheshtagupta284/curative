@@ -1,0 +1,90 @@
+body{
+    font-family: 'Montserrat';
+}
+.loginPage{
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    box-shadow: 2px 4px 10px 4px rgba(0, 0, 0, 0.055);
+    margin:10%;
+    border: 1px solid rgba(0, 0, 0, 0.39);
+}
+form i {
+    margin-left: -30px;
+    cursor: pointer;
+}
+.loginHead{
+    background-color: rgba(255, 255, 255, 0.849);
+    display:block;
+    padding: 20px;
+    margin:0px;
+    font-size: 2rem;
+    border-top-left-radius:0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.loginPage:hover{
+    box-shadow: 2px 4px 10px 4px rgba(0, 0, 0, 0.219);
+}
+
+.loginInput{
+    border: 1px solid rgb(82, 77, 81);
+    border-radius: 0.2rem;
+    width: 95%;
+    margin-top: 10px;
+    padding:10px 5px;
+}
+input::placeholder{
+    font-family: 'Montserrat';
+}
+
+.loginMainFormEmail,.loginMainFormPass{
+    margin-bottom: 30px;
+}
+.loginMainFormOther{
+    font-size: small;
+    margin-top: 3rem;
+}
+.loginMainFormOtherRem{
+    display: inline-block;
+}
+.loginMainFormOtherForget{
+    margin-right:5px;
+    float: right;
+}
+.loginMainDown{
+    text-align: center;
+}
+.loginMainUp{
+    padding: 1rem;
+}
+button {
+    border-radius: 0.5rem;
+    padding: 10px 15px;
+    border: 1px solid rgba(0, 14, 10, 0.856);
+    color: white;
+    background-color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    width: 10rem;
+}
+button:hover{
+    box-shadow: 0px 10px 20px 2px rgba(0, 15, 17, 0.26);
+    color:white;
+}
+.loginFoot{
+    font-size: small;
+    text-align: center;
+    padding:20px;
+}
+#loginFootHere{
+    text-decoration: none;
+}
+@media (min-width: 500px){
+    .loginPage{
+        margin: 50px auto;
+        width: 60%;
+    }
+
+}
