@@ -34,7 +34,7 @@ $("#loginMainForm").on("submit", async (e) => {
 
   await $.ajax({
     type: "POST",
-    url: "http://localhost:5000/patient/login",
+    url: "http://localhost:5000/doctor/login",
     data: credentials,
     success: (r) => {
       token = r.token;
